@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Info -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Docs - Get Started & Learn NeuroLaunch</title>
+  <meta name="title" content="Docs - Get Started & Learn NeuroLaunch" />
+  <meta name="description" content="Access full documentation for NeuroLaunch. Setup guides, API references, and platform usage tutorials." />
+  <meta name="keywords" content="documentation, guides, API docs, NeuroLaunch help, support" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="NeuroLaunch Team" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Docs - Full Documentation | NeuroLaunch" />
+  <meta property="og:description" content="Learn everything you need to start using NeuroLaunch and scale productivity." />
+  <meta property="og:url" content="https://yourdomain.com/docs.html" />
+  <meta property="og:image" content="https://yourdomain.com/img2/docs-og.jpg" />
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:title" content="Docs - Full Documentation | NeuroLaunch" />
+  <meta name="twitter:description" content="Learn everything you need to start using NeuroLaunch and scale productivity." />
+  <meta name="twitter:image" content="https://yourdomain.com/img2/docs-og.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <!-- Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Custom Page Styles -->
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      transition: 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #0dcaf0;
+    }
+
+    .hero-section {
+      padding-top: 120px;
+      padding-bottom: 60px;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-weight: 700;
+    }
+
+    .footer {
+      text-align: center;
+      color: #bbb;
+      padding: 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 50px;
+    }
+
+    a.text-decoration-none {
+      color: #fff;
+    }
+
+    a.text-decoration-none:hover {
+      color: #0dcaf0;
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YEC0GBX6FC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-YEC0GBX6FC');
+  </script>
+</head>
+
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3 fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="index.html">
+      <i class="fas fa-brain me-2 text-info"></i>NeuroLaunch
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center gap-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item">
+          <a href="login.html" class="btn btn-outline-light rounded-pill px-3 py-1">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="signup.html" class="btn btn-info text-white rounded-pill px-3 py-1">Sign Up</a>
+        </li>
+        <!-- 🌙 Properly aligned Dark Mode Toggle Button -->
+        <li class="nav-item d-flex align-items-center">
+          <button id="toggle-dark" class="btn btn-sm btn-outline-light px-2 py-1" title="Toggle Dark Mode">🌙</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- ================= END NAVBAR ================= -->
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section container">
+    <h1 class="display-5">Explore the NeuroLaunch Documentation</h1>
+    <p class="lead text-light">Everything you need to master NeuroLaunch in one place.</p>
+  </section>
+
+  <!-- ================= DOCS GRID ================= -->
+  <section class="container py-4">
+    <div class="row g-4">
+      <!-- DOC CARDS -->
+      <div class="col-md-6 col-lg-4">
+        <a href="docs/getting-started.html" class="text-decoration-none">
+          <div class="glass-card h-100 text-center">
+            <div class="card-icon"><i class="fas fa-rocket"></i></div>
+            <h4 class="fw-semibold">Getting Started</h4>
+            <p>Kickstart your journey with NeuroLaunch setup and overview.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="docs/installation.html" class="text-decoration-none">
+          <div class="glass-card h-100 text-center">
+            <div class="card-icon"><i class="fas fa-download"></i></div>
+            <h4 class="fw-semibold">Installation</h4>
+            <p>Install NeuroLaunch and set up dependencies on your system.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="docs/features-guide.html" class="text-decoration-none">
+          <div class="glass-card h-100 text-center">
+            <div class="card-icon"><i class="fas fa-cogs"></i></div>
+            <h4 class="fw-semibold">Features Guide</h4>
+            <p>Detailed walkthrough of all features NeuroLaunch offers.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="docs/api.html" class="text-decoration-none">
+          <div class="glass-card h-100 text-center">
+            <div class="card-icon"><i class="fas fa-code"></i></div>
+            <h4 class="fw-semibold">API</h4>
+            <p>Integrate with our powerful REST API and automate actions.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="docs/customization.html" class="text-decoration-none">
+          <div class="glass-card h-100 text-center">
+            <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
+            <h4 class="fw-semibold">Customization</h4>
+            <p>Make NeuroLaunch truly yours by customizing every detail.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="docs/integrations.html" class="text-decoration-none">
+          <div class="glass-card h-100 text-center">
+            <div class="card-icon"><i class="fas fa-plug"></i></div>
+            <h4 class="fw-semibold">Integrations</h4>
+            <p>Connect NeuroLaunch to third-party tools you already use.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="docs/troubleshooting.html" class="text-decoration-none">
+          <div class="glass-card h-100 text-center">
+            <div class="card-icon"><i class="fas fa-tools"></i></div>
+            <h4 class="fw-semibold">Troubleshooting</h4>
+            <p>Common issues and how to fix them quickly and easily.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="docs/faq.html" class="text-decoration-none">
+          <div class="glass-card h-100 text-center">
+            <div class="card-icon"><i class="fas fa-question-circle"></i></div>
+            <h4 class="fw-semibold">FAQ</h4>
+            <p>Answers to frequently asked questions by our users.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="docs/changelog.html" class="text-decoration-none">
+          <div class="glass-card h-100 text-center">
+            <div class="card-icon"><i class="fas fa-history"></i></div>
+            <h4 class="fw-semibold">Changelog</h4>
+            <p>Track version updates, fixes, and improvements over time.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+    <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-2">&copy; 2025 NeuroLaunch. All rights reserved.</p>
+      <div class="mb-3">
+        <a href="mailto:contact@neurolaunch.com" class="text-info fs-4 me-3" title="Email Us">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://twitter.com/neurolaunch" target="_blank" rel="noopener noreferrer" class="text-info fs-4 me-3" title="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://github.com/neurolaunch" target="_blank" rel="noopener noreferrer" class="text-info fs-4" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="mb-0">
+        <a href="legal/privacy-policy.html" class="text-info">Privacy Policy</a> |
+        <a href="legal/terms-of-service.html" class="text-info">Terms of Service</a>
+      </p>
+    </div>
+  </footer>  <!-- ================= END FOOTER ================= -->
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="analytics/tracking.js" defer></script>
+</body>
+</html>

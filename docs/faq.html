@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ - NeuroLaunch Documentation</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3 fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="../index.html">
+      <i class="fas fa-brain me-2 text-info"></i>NeuroLaunch
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center gap-2">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../features.html">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../docs.html">Docs</a></li>
+        <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+        <li class="nav-item">
+          <a href="../login.html" class="btn btn-outline-light rounded-pill px-3 py-1">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="../signup.html" class="btn btn-info text-white rounded-pill px-3 py-1">Sign Up</a>
+        </li>
+        <!-- 🌙 Dark Mode Toggle Button -->
+        <li class="nav-item d-flex align-items-center">
+          <button id="toggle-dark" class="btn btn-sm btn-outline-light px-2 py-1" title="Toggle Dark Mode">🌙</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav><!-- Navbar End -->
+
+<!-- FAQ Section Start -->
+<section class="pt-5 mt-5 text-white">
+  <div class="container">
+    <div class="glass-card p-5 rounded-4 shadow-lg mb-5">
+      <h1 class="mb-4 fw-bold text-info">
+        <i class="fas fa-question-circle me-2"></i>Frequently Asked Questions (FAQ)
+      </h1>
+      <p class="lead text-secondary mb-5">
+        Here you'll find answers to the most common questions about NeuroLaunch, integrations, API usage, pricing, security, and more.
+        If your question isn’t listed, feel free to
+        <a href="../contact.html" class="text-info text-decoration-underline">contact our support team</a>.
+      </p>
+
+      <div class="accordion" id="faqAccordion">
+          
+          <!-- FAQ 1 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              How do I get started with NeuroLaunch?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              Getting started is easy! Just follow these steps:
+              <ol>
+                <li>Sign up for a NeuroLaunch account on our <a href="../index.html" class="text-info">homepage</a>.</li>
+                <li>Verify your email address through the confirmation email we send.</li>
+                <li>Log in to your dashboard and explore the features.</li>
+                <li>Set up your first project by integrating your preferred tools.</li>
+                <li>Access our <a href="../docs.html" class="text-info">Documentation</a> for tutorials and detailed guides.</li>
+              </ol>
+              For personalized onboarding, our support team is available to help — just reach out!
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              What integrations are supported?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              NeuroLaunch supports a wide range of integrations designed to fit your workflow:
+              <ul>
+                <li><strong>Slack:</strong> Real-time AI alerts and summaries within your channels.</li>
+                <li><strong>Google Sheets:</strong> Sync and analyze AI outputs directly in spreadsheets.</li>
+                <li><strong>Zapier:</strong> Connect with 5,000+ apps for custom no-code automations.</li>
+                <li><strong>Notion:</strong> Generate content and manage knowledge bases with AI assistance.</li>
+                <li><strong>Custom Webhooks:</strong> Build secure connections for real-time event handling.</li>
+              </ul>
+              We are continuously adding new integrations based on user feedback, so stay tuned!
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              Is there a free trial or demo available?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              Yes! NeuroLaunch offers a 14-day free trial on all plans, including access to core integrations and AI features.
+              <br />
+              During the trial, you can:
+              <ul>
+                <li>Test all integrations and automation workflows.</li>
+                <li>Access full documentation and onboarding resources.</li>
+                <li>Receive email support from our customer success team.</li>
+              </ul>
+              No credit card required to start the trial. After that, you can upgrade to a paid plan or continue with a limited free tier.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqFour">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+              How secure is my data with NeuroLaunch?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              Security is our top priority. NeuroLaunch employs industry-standard practices to safeguard your data:
+              <ul>
+                <li>All data is encrypted in transit using TLS (HTTPS).</li>
+                <li>Data stored on servers is encrypted at rest.</li>
+                <li>Access to your data is controlled with strict authentication and authorization.</li>
+                <li>Regular security audits and penetration tests are conducted.</li>
+                <li>We comply with GDPR and CCPA privacy regulations.</li>
+              </ul>
+              You can also manage API keys and revoke access anytime through your dashboard.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqFive">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+              Can I customize the AI models or workflows?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              Absolutely! NeuroLaunch allows you to tailor AI models and workflows to your needs:
+              <ul>
+                <li>Create custom triggers and rules via the dashboard.</li>
+                <li>Use webhooks to connect AI responses with your apps and processes.</li>
+                <li>Adjust model parameters to influence AI behavior and output style.</li>
+                <li>Build multi-step workflows using Zapier or native automation tools.</li>
+              </ul>
+              Advanced customization is available on Pro and Enterprise plans with dedicated support.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ 6 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqSix">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+              What is the pricing model?
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              NeuroLaunch offers flexible pricing designed for teams of all sizes:
+              <ul>
+                <li><strong>Free Tier:</strong> Limited integrations, basic AI access, up to 3 projects.</li>
+                <li><strong>Pro Plan:</strong> Full integration access, advanced AI customization, priority support.</li>
+                <li><strong>Enterprise Plan:</strong> Custom integrations, dedicated account manager, SLAs, on-premise options.</li>
+              </ul>
+              Visit our <a href="../pricing.html" class="text-info">Pricing page</a> for full details and comparison charts.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqSeven">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+              How do I troubleshoot integration issues?
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              If you encounter issues with integrations, try these steps:
+              <ul>
+                <li>Check your API tokens and ensure they have proper permissions.</li>
+                <li>Verify that your webhook URLs are correct and publicly accessible.</li>
+                <li>Review the integration logs in your NeuroLaunch dashboard for error messages.</li>
+                <li>Test your setup in sandbox mode before switching to production.</li>
+                <li>Ensure rate limits or firewall rules aren’t blocking requests.</li>
+              </ul>
+              If the problem persists, contact support with detailed logs and steps to reproduce.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqEight">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+              Can NeuroLaunch be used without coding skills?
+            </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              Yes! NeuroLaunch is designed for both developers and non-developers:
+              <ul>
+                <li>Use no-code automation tools like Zapier for integrations.</li>
+                <li>Configure AI triggers and workflows with an intuitive dashboard.</li>
+                <li>Access tutorials, templates, and pre-built workflows to get started quickly.</li>
+                <li>Developers can use APIs and webhooks for more complex customizations.</li>
+              </ul>
+              Our goal is to empower everyone to leverage AI easily.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqNine">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+              How do I cancel or change my subscription?
+            </button>
+          </h2>
+          <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              You can cancel or upgrade your subscription anytime from your account dashboard:
+              <ol>
+                <li>Log in and go to <strong>Settings > Billing</strong>.</li>
+                <li>Select <strong>Manage Subscription</strong>.</li>
+                <li>Choose to upgrade, downgrade, or cancel your plan.</li>
+                <li>Confirm your choice and review any applicable billing adjustments.</li>
+              </ol>
+              After cancellation, your account will remain active until the end of the current billing cycle.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqTen">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+              Where can I find developer resources and API docs?
+            </button>
+          </h2>
+          <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              Developer resources are available at our <a href="../docs.html" class="text-info">Documentation page</a>, including:
+              <ul>
+                <li>Comprehensive API reference with examples.</li>
+                <li>Webhook configuration guides.</li>
+                <li>SDKs and code samples for popular languages.</li>
+                <li>Tutorial videos and integration walkthroughs.</li>
+                <li>Community forums and developer support channels.</li>
+              </ul>
+              We constantly update our developer hub to keep you equipped with the latest tools and information.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ 11 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqEleven">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven">
+              What kind of support does NeuroLaunch offer?
+            </button>
+          </h2>
+          <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              NeuroLaunch provides multiple support channels:
+              <ul>
+                <li><strong>Email Support:</strong> Available 24/7 for all users.</li>
+                <li><strong>Live Chat:</strong> During business hours for quick assistance.</li>
+                <li><strong>Dedicated Account Managers:</strong> For Enterprise customers.</li>
+                <li><strong>Knowledge Base:</strong> Extensive articles, tutorials, and FAQs.</li>
+                <li><strong>Community Forums:</strong> Engage with other users and developers.</li>
+              </ul>
+              We prioritize timely and effective support to ensure your success.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 12 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqTwelve">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve">
+              How do I provide feedback or request new features?
+            </button>
+          </h2>
+          <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              We love hearing from our users! To provide feedback or request features:
+              <ul>
+                <li>Use the <a href="../contact.html" class="text-info">Contact form</a> on our website.</li>
+                <li>Join our community forums and participate in feature request discussions.</li>
+                <li>Submit ideas directly via the feedback widget inside your dashboard.</li>
+              </ul>
+              Your input helps us prioritize new features and improvements.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 13 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqThirteen">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen">
+              Can I export my data from NeuroLaunch?
+            </button>
+          </h2>
+          <div id="collapseThirteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              Yes, you can export your project data anytime:
+              <ul>
+                <li>Navigate to your project dashboard.</li>
+                <li>Click the <strong>Export</strong> button and choose your preferred format (CSV, JSON, XML).</li>
+                <li>Data exports include AI-generated content, logs, and integration details.</li>
+              </ul>
+              We support GDPR compliance and ensure you retain full control over your data.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 14 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqFourteen">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen">
+              What happens if I exceed my plan limits?
+            </button>
+          </h2>
+          <div id="collapseFourteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              If you exceed your monthly limits for API calls, projects, or integrations:
+              <ul>
+                <li>You will receive email notifications when approaching limits.</li>
+                <li>Access may be temporarily throttled or restricted until the next billing cycle.</li>
+                <li>You can upgrade your plan anytime to increase limits.</li>
+                <li>Unused quota does not roll over to the next period.</li>
+              </ul>
+              Our team is happy to assist with custom plans for high-volume users.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 15 -->
+        <div class="accordion-item bg-dark border border-info mb-3">
+          <h2 class="accordion-header" id="faqFifteen">
+            <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen">
+              Can NeuroLaunch be used internationally?
+            </button>
+          </h2>
+          <div id="collapseFifteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-secondary">
+              Yes, NeuroLaunch supports users globally:
+              <ul>
+                <li>Our servers are distributed worldwide for low latency.</li>
+                <li>Multi-currency billing is available for select regions.</li>
+                <li>Our platform supports multiple languages and time zones.</li>
+                <li>We comply with international privacy laws like GDPR and CCPA.</li>
+              </ul>
+              If you have specific localization needs, please contact our sales team.
+            </div>
+          </div>
+        </div>
+        
+        </div> <!-- End of #faqAccordion -->
+
+      <!-- Back to Docs Button -->
+      <div class="mt-5 text-center">
+        <a href="../docs.html" class="btn btn-info btn-lg rounded-pill px-5">
+          <i class="fas fa-book me-2"></i>Back to Documentation
+        </a>
+      </div>
+    </div> <!-- End of glass-card -->
+  </div> <!-- End of .container -->
+</section>
+
+<!-- Footer Start -->
+<footer class="bg-dark text-white mt-5 pt-4 pb-3 border-top border-secondary">
+  <div class="container text-center">
+    <!-- Social Icons -->
+    <div class="mb-3 d-flex justify-content-center gap-4">
+      <a href="mailto:neurolaunch@email.com" class="text-info" aria-label="Email">
+        <i class="fas fa-envelope fa-lg"></i>
+      </a>
+      <a href="https://github.com/neurolaunch" class="text-info" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a href="https://twitter.com/neurolaunch" class="text-info" target="_blank" aria-label="Twitter">
+        <i class="fab fa-x-twitter fa-lg"></i>
+      </a>
+    </div>
+
+    <!-- Footer Text -->
+    <p class="mb-1">&copy; 2025 <strong>NeuroLaunch</strong>. All rights reserved.</p>
+    <p>
+      <a href="../legal/privacy-policy.html" class="text-info">Privacy Policy</a> |
+      <a href="../legal/terms-of-service.html" class="text-info">Terms of Service</a>
+    </p>
+  </div>
+</footer>
+<!-- Footer End -->
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YEC0GBX6FC"></script>
+<script src="analytics/tracking.js" defer></script>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

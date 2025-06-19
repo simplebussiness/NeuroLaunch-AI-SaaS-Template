@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeuroLaunch - Features Guide</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <!-- Or if it's .ico -->
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    body {
+      background: url('../img/blur-brain-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0e0e0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .glass-container {
+      background: rgba(20, 20, 35, 0.85);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(15, 32, 39, 0.7);
+      padding: 40px;
+      margin: 110px auto 60px;
+      max-width: 900px;
+    }
+
+    h1, h2, h3 {
+      color: #00bcd4;
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: #00bcd4;
+      margin-right: 15px;
+    }
+
+    .feature-box {
+      background: rgba(0, 188, 212, 0.1);
+      border: 1.5px solid #00bcd4;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 188, 212, 0.5);
+      background: rgba(0, 188, 212, 0.15);
+    }
+
+    .btn-docs {
+      background-color: transparent;
+      border: 2px solid #00bcd4;
+      color: #00bcd4;
+      border-radius: 25px;
+      padding: 10px 30px;
+      font-weight: 600;
+      margin-top: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-docs:hover {
+      background-color: #00bcd4;
+      color: #121212;
+      text-decoration: none;
+    }
+
+    pre {
+      background-color: rgba(0, 188, 212, 0.1);
+      border-left: 4px solid #00bcd4;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      color: #b2ebf2;
+    }
+
+    code {
+      color: #80deea;
+      font-weight: 600;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      color: #999;
+      padding: 25px 0;
+      font-size: 0.85rem;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+    }
+
+    @media (max-width: 576px) {
+      .feature-icon {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+      }
+
+      .glass-container {
+        padding: 25px 15px;
+        margin-top: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3 fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="../index.html">
+      <i class="fas fa-brain me-2 text-info"></i>NeuroLaunch
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center gap-2">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../features.html">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../docs.html">Docs</a></li>
+        <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+        <li class="nav-item">
+          <a href="../login.html" class="btn btn-outline-light rounded-pill px-3 py-1">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="../signup.html" class="btn btn-info text-white rounded-pill px-3 py-1">Sign Up</a>
+        </li>
+        <!-- 🌙 Dark Mode Toggle Button -->
+        <li class="nav-item d-flex align-items-center">
+          <button id="toggle-dark" class="btn btn-sm btn-outline-light px-2 py-1" title="Toggle Dark Mode">🌙</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Navbar End -->
+  
+  <main class="glass-container">
+    <h1 class="mb-4 text-center">
+      <i class="fas fa-lightbulb feature-icon"></i>Features Guide
+    </h1>
+    <p class="lead text-center mb-5">
+      Unleash the full power of NeuroLaunch with our detailed feature breakdown.
+    </p>
+
+    <!-- Feature 1 -->
+    <section class="feature-box">
+      <h2><i class="fas fa-robot feature-icon"></i>AI-Powered Automation</h2>
+      <p>
+        NeuroLaunch leverages state-of-the-art artificial intelligence to
+        automate complex workflows. From data processing to customer
+        engagement, our AI-driven engine saves you time and boosts productivity.
+      </p>
+      <ul>
+        <li>Adaptive algorithms that learn from your data</li>
+        <li>Real-time decision making and prediction</li>
+        <li>Seamless integration with popular platforms</li>
+      </ul>
+      <pre><code>// Sample API call for AI automation
+fetch('/api/automation', {
+  method: 'POST',
+  body: JSON.stringify({ data: userData }),
+  headers: { 'Content-Type': 'application/json' },
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));</code></pre>
+    </section>
+
+    <!-- Feature 2 -->
+    <section class="feature-box">
+      <h2><i class="fas fa-network-wired feature-icon"></i>Scalable Architecture</h2>
+      <p>
+        Built for growth, NeuroLaunch scales effortlessly with your business
+        needs. Our cloud-native infrastructure supports millions of users
+        without compromising performance.
+      </p>
+      <ul>
+        <li>Microservices architecture for modular expansion</li>
+        <li>Auto-scaling clusters in multiple regions</li>
+        <li>High availability with minimal downtime</li>
+      </ul>
+      <pre><code>// Kubernetes deployment example
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neurolaunch-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: neurolaunch
+  template:
+    metadata:
+      labels:
+        app: neurolaunch
+    spec:
+      containers:
+      - name: neurolaunch
+        image: neurolaunch/service:latest
+        ports:
+        - containerPort: 8080</code></pre>
+    </section>
+
+    <!-- Feature 3 -->
+    <section class="feature-box">
+      <h2><i class="fas fa-shield-alt feature-icon"></i>Enterprise Security</h2>
+      <p>
+        Security is our top priority. NeuroLaunch incorporates advanced
+        security protocols to protect your data and ensure compliance with
+        global standards.
+      </p>
+      <ul>
+        <li>End-to-end encryption of all data in transit and at rest</li>
+        <li>Multi-factor authentication and role-based access control</li>
+        <li>Regular security audits and penetration testing</li>
+      </ul>
+      <pre><code>// Example of JWT token validation
+function verifyToken(token) {
+  const decoded = jwt.verify(token, process.env.JWT_SECRET);
+  if (!decoded) {
+    throw new Error('Invalid token');
+  }
+  return decoded;
+}</code></pre>
+    </section>
+    
+    <!-- Feature 4 -->
+    <section class="feature-box">
+      <h2><i class="fas fa-chart-line feature-icon"></i>Analytics &amp; Insights</h2>
+      <p>
+        Gain actionable insights with NeuroLaunch's comprehensive analytics
+        dashboard. Track user behavior, system performance, and business KPIs
+        with real-time updates.
+      </p>
+      <ul>
+        <li>Customizable dashboards and reports</li>
+        <li>Real-time event tracking</li>
+        <li>Export data in multiple formats (CSV, JSON, PDF)</li>
+      </ul>
+      <pre><code>// Fetching analytics data
+fetch('/api/analytics?range=last_30_days')
+  .then(response => response.json())
+  .then(data => updateDashboard(data))
+  .catch(err => console.error(err));</code></pre>
+    </section>
+
+    <!-- Feature 5 -->
+    <section class="feature-box">
+      <h2><i class="fas fa-cogs feature-icon"></i>Customization &amp; Integrations</h2>
+      <p>
+        NeuroLaunch offers flexible customization options and integrates with
+        popular tools and APIs to fit your workflow.
+      </p>
+      <ul>
+        <li>Drag-and-drop UI builder</li>
+        <li>RESTful API for all core features</li>
+        <li>Integrations with Slack, Zapier, and more</li>
+      </ul>
+      <pre><code>// Example of integration setup
+const slackWebhook = process.env.SLACK_WEBHOOK_URL;
+
+function notifySlack(message) {
+  fetch(slackWebhook, {
+    method: 'POST',
+    body: JSON.stringify({ text: message }),
+    headers: { 'Content-Type': 'application/json' },
+  });
+}</code></pre>
+    </section>
+
+    <!-- Feature 6 -->
+    <section class="feature-box">
+      <h2><i class="fas fa-mobile-alt feature-icon"></i>Mobile-First Design</h2>
+      <p>
+        Fully responsive and mobile-optimized, NeuroLaunch ensures seamless
+        usability on any device, whether desktop, tablet, or smartphone.
+      </p>
+      <ul>
+        <li>Adaptive layouts using Bootstrap 5</li>
+        <li>Touch-friendly interactions</li>
+        <li>Progressive Web App (PWA) ready</li>
+      </ul>
+      <pre><code>// Service worker registration example
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(() => {
+    console.log('Service Worker Registered');
+  });
+}</code></pre>
+    </section>
+    
+    <!-- Feature 7 -->
+    <section class="feature-box">
+      <h2><i class="fas fa-cloud-upload-alt feature-icon"></i>Cloud Sync & Backup</h2>
+      <p>
+        NeuroLaunch securely syncs your data to the cloud in real-time with automatic backups. Never lose a single byte of your important information.
+      </p>
+      <ul>
+        <li>Real-time cloud sync with encrypted channels</li>
+        <li>Automated backups with restore options</li>
+        <li>Supports AWS, Azure, and Google Cloud</li>
+      </ul>
+      <pre><code>// Example backup API call
+fetch('/api/backup/create', {
+  method: 'POST',
+  headers: { 'Authorization': `Bearer ${userToken}` }
+})
+.then(res => res.json())
+.then(data => console.log('Backup created:', data));</code></pre>
+    </section>
+
+    <!-- Feature 8 -->
+    <section class="feature-box">
+      <h2><i class="fas fa-language feature-icon"></i>Multi-language Support</h2>
+      <p>
+        Break language barriers with NeuroLaunch. Our multi-language support enables you to serve global audiences with ease.
+      </p>
+      <ul>
+        <li>Supports 25+ languages including RTL scripts</li>
+        <li>Automatic locale detection</li>
+        <li>Easy integration with i18n libraries</li>
+      </ul>
+      <pre><code>// Language switch logic
+const lang = navigator.language || 'en';
+i18n.changeLanguage(lang);</code></pre>
+    </section>
+
+    <!-- Feature 9 -->
+    <section class="feature-box">
+      <h2><i class="fas fa-users feature-icon"></i>Team Collaboration Tools</h2>
+      <p>
+        Empower your teams with real-time collaboration tools built right into the platform. Share data, comment, and co-create.
+      </p>
+      <ul>
+        <li>Shared workspaces and roles</li>
+        <li>Activity tracking and notifications</li>
+        <li>Live document editing (Google Docs-style)</li>
+      </ul>
+      <pre><code>// Example: Assign user to project
+fetch('/api/projects/1234/addUser', {
+  method: 'POST',
+  body: JSON.stringify({ userId: '5678' }),
+  headers: { 'Content-Type': 'application/json' }
+});</code></pre>
+    </section>
+
+    <!-- Feature 10 -->
+    <section class="feature-box">
+      <h2><i class="fas fa-tools feature-icon"></i>Developer Friendly</h2>
+      <p>
+        Developers love NeuroLaunch for its clean APIs, detailed docs, and easy extensibility. Build what you want without limitations.
+      </p>
+      <ul>
+        <li>RESTful & GraphQL API support</li>
+        <li>Detailed developer documentation</li>
+        <li>Built-in debugging and sandbox mode</li>
+      </ul>
+      <pre><code>// REST API call to fetch user data
+fetch('/api/users/me')
+  .then(res => res.json())
+  .then(user => console.log(user));</code></pre>
+    </section>
+    
+    <!-- CTA -->
+    <div class="text-center mt-5">
+      <a href="../docs.html" class="btn-docs">
+        <i class="fas fa-book-open me-2"></i>Read Full Documentation
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer Start -->
+  <footer class="bg-dark text-white mt-5 pt-4 pb-3 border-top border-secondary">
+    <div class="container text-center">
+      <!-- Social Icons -->
+      <div class="mb-3 d-flex justify-content-center gap-4">
+        <a href="mailto:neurolaunch@email.com" class="text-info" aria-label="Email">
+          <i class="fas fa-envelope fa-lg"></i>
+        </a>
+        <a href="https://github.com/neurolaunch" class="text-info" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="https://twitter.com/neurolaunch" class="text-info" target="_blank" aria-label="Twitter">
+          <i class="fab fa-x-twitter fa-lg"></i>
+        </a>
+      </div>
+
+      <!-- Footer Text -->
+      <p class="mb-1">&copy; 2025 <strong>NeuroLaunch</strong>. All rights reserved.</p>
+      <p>
+        <a href="../legal/privacy-policy.html" class="text-info">Privacy Policy</a> |
+        <a href="../legal/terms-of-service.html" class="text-info">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Scripts -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YEC0GBX6FC"></script>
+  <script src="analytics/tracking.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="../js/script.js"></script>
+</body>
+</html>

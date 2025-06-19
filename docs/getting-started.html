@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Getting Started - NeuroLaunch Docs</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <!-- Optional .ico version -->
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+      color: #c9d1d9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      padding-top: 80px;
+    }
+
+    a, a:hover, a:focus {
+      color: #58a6ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #1f6feb;
+    }
+
+    .navbar {
+      background: rgba(13, 17, 23, 0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .navbar-brand i {
+      color: #58a6ff;
+    }
+
+    header.hero-section {
+  background-image: image-set(
+    url('../img/hero-banner.webp') type('image/webp'),
+    url('../img/hero-banner.jpg') type('image/jpeg')
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+      backdrop-filter: brightness(0.5) blur(4px);
+      padding: 4rem 0;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(8, 45, 68, 0.7);
+      text-align: center;
+      color: #58a6ff;
+      margin-bottom: 3rem;
+    }
+
+    header.hero-section h1 {
+      font-weight: 900;
+      font-size: 2.8rem;
+      text-shadow: 0 0 12px #58a6ff;
+      margin-bottom: 1rem;
+    }
+
+    header.hero-section p.lead {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #9ccaff;
+      text-shadow: 0 0 10px #1f6feb;
+    }
+
+    main.container {
+      max-width: 900px;
+      background: rgba(13, 17, 23, 0.85);
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 25px rgba(8, 45, 68, 0.8);
+    }
+
+    h2.section-title {
+      color: #58a6ff;
+      border-bottom: 2px solid #1f6feb;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #c9d1d9;
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    }
+
+    ul {
+      padding-left: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    code {
+      background: #161b22;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.3rem;
+      font-family: 'Fira Mono', monospace;
+      font-size: 0.95rem;
+      color: #3bc9b0;
+      box-shadow: 0 0 6px #3bc9b0;
+    }
+
+    pre {
+      background: #0d1117;
+      border-radius: 0.6rem;
+      padding: 1rem 1.2rem;
+      overflow-x: auto;
+      color: #3bc9b0;
+      box-shadow: inset 0 0 10px #1f6feb99;
+      font-family: 'Fira Mono', monospace;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      line-height: 1.4;
+      border: 1px solid #2a3e44;
+    }
+
+    .btn-docs {
+      background: #0ea89d;
+      border: none;
+      color: #e6f1f1;
+      font-weight: 600;
+      padding: 0.6rem 1.7rem;
+      border-radius: 2rem;
+      box-shadow: 0 0 15px #0ea89d88;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 2rem;
+      display: inline-block;
+      letter-spacing: 0.04em;
+      font-size: 1rem;
+      user-select: none;
+      text-align: center;
+    }
+
+    .btn-docs:hover {
+      background: #13b9aa;
+      color: #f0f9f9;
+      box-shadow: 0 0 25px #13b9aaaa;
+      text-decoration: none;
+    }
+
+    footer.text-center {
+      margin-top: 4rem;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      color: #8b949e;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3 fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="../index.html">
+      <i class="fas fa-brain me-2 text-info"></i>NeuroLaunch
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center gap-2">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../features.html">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../docs.html">Docs</a></li>
+        <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+        <li class="nav-item">
+          <a href="../login.html" class="btn btn-outline-light rounded-pill px-3 py-1">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="../signup.html" class="btn btn-info text-white rounded-pill px-3 py-1">Sign Up</a>
+        </li>
+        <!-- 🌙 Dark Mode Toggle Button -->
+        <li class="nav-item d-flex align-items-center">
+          <button id="toggle-dark" class="btn btn-sm btn-outline-light px-2 py-1" title="Toggle Dark Mode">🌙</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Hero Section -->
+<header class="hero-section">
+  <div class="container">
+    <h1>Getting Started with NeuroLaunch</h1>
+    <p class="lead">
+      Your step-by-step guide to harnessing the full potential of NeuroLaunch AI SaaS platform.
+    </p>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container" role="main" tabindex="0">
+
+  <!-- Introduction -->
+  <section>
+    <h2 class="section-title">
+      <i class="fas fa-rocket me-2 text-info"></i>Introduction
+    </h2>
+    <p>
+      Welcome to NeuroLaunch! This guide will walk you through everything you need to know to start
+      building powerful AI-driven SaaS applications with ease and efficiency. Whether you're a developer,
+      entrepreneur, or product manager, NeuroLaunch is designed to empower your innovation journey.
+    </p>
+    <p>
+      In this documentation, you'll find clear instructions, useful tips, and best practices that help
+      you get up and running quickly, and develop scalable AI solutions tailored to your business needs.
+    </p>
+  </section>
+
+  <!-- Step 1: Installation -->
+  <section>
+    <h2 class="section-title">
+      <i class="fas fa-download me-2 text-info"></i>Step 1: Installation
+    </h2>
+    <p>Before diving in, ensure your development environment meets the minimum requirements:</p>
+    <ul>
+      <li>Node.js v16 or later installed</li>
+      <li>Docker (optional for containerized deployment)</li>
+      <li>Access to your preferred code editor (VS Code recommended)</li>
+      <li>Stable internet connection for downloading dependencies</li>
+    </ul>
+    <p>Install the NeuroLaunch CLI globally by running the following command:</p>
+    <pre><code>npm install -g neurolaunch-cli</code></pre>
+    <p>Verify installation by checking the CLI version:</p>
+    <pre><code>neurolaunch --version</code></pre>
+    <p>This confirms successful installation and readiness to create projects.</p>
+  </section>
+
+  <!-- Step 2: Creating Your First Project -->
+  <section>
+    <h2 class="section-title">
+      <i class="fas fa-play-circle me-2 text-info"></i>Step 2: Creating Your First Project
+    </h2>
+    <p>
+      Start a new NeuroLaunch project with a single command. In your terminal, navigate to the folder
+      where you'd like to create the project and run:
+    </p>
+    <pre><code>neurolaunch create my-first-app</code></pre>
+    <p>This scaffolds a complete AI-powered SaaS app template. Once created, enter the new project directory:</p>
+    <pre><code>cd my-first-app</code></pre>
+    <p>Then install the required dependencies:</p>
+    <pre><code>npm install</code></pre>
+    <p>You're now ready to start developing your application with all the essential tools pre-configured.</p>
+  </section>
+  
+  <!-- Step 3: Configuration -->
+  <section>
+    <h2 class="section-title">
+      <i class="fas fa-cogs me-2 text-info"></i>Step 3: Configuration
+    </h2>
+    <p>
+      Open the <code>config.json</code> file to customize your app’s settings, including API credentials,
+      database access, and feature toggles:
+    </p>
+    <pre><code>{
+  "apiKey": "YOUR_API_KEY_HERE",
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "user": "dbuser",
+    "password": "securepassword",
+    "name": "neurolaunch_db"
+  },
+  "features": {
+    "enableAnalytics": true,
+    "enableChatbot": true
+  }
+}</code></pre>
+    <p>Don't forget to replace placeholder values with real credentials. Keep this file secure!</p>
+  </section>
+
+  <!-- Step 4: Running Your Application -->
+  <section>
+    <h2 class="section-title">
+      <i class="fas fa-play me-2 text-info"></i>Step 4: Running Your Application
+    </h2>
+    <p>Start your app locally using the command:</p>
+    <pre><code>npm start</code></pre>
+    <p>
+      This will launch the development server — head to <code>http://localhost:3000</code> in your browser
+      to view your NeuroLaunch app in action.
+    </p>
+    <p>Press <code>Ctrl + C</code> in the terminal to stop the server when needed.</p>
+  </section>
+  
+  <!-- Step 5: Next Steps -->
+  <section>
+    <h2 class="section-title">
+      <i class="fas fa-tools me-2 text-info"></i>Step 5: Next Steps
+    </h2>
+    <p>With your application running, consider exploring these next-level enhancements:</p>
+    <ul>
+      <li>Integrate advanced AI models using NeuroLaunch API</li>
+      <li>Customize UI components located in the <code>src/components</code> folder</li>
+      <li>Implement user authentication and role-based access</li>
+      <li>Deploy your app using platforms like AWS, Azure, Vercel, or Netlify</li>
+      <li>Monitor real-time usage and analytics via built-in dashboards</li>
+      <li>Enable automatic backups and sync with cloud storage</li>
+    </ul>
+    <p>
+      For more advanced deployment guides and best practices, see the
+      <a href="../docs.html">Deployment</a> and <a href="../docs.html">Advanced Configuration</a> sections.
+    </p>
+  </section>
+
+  <!-- Need Help Section -->
+  <section>
+    <h2 class="section-title">
+      <i class="fas fa-question-circle me-2 text-info"></i>Need Help?
+    </h2>
+    <p>If you encounter any challenges, NeuroLaunch offers multiple support resources:</p>
+    <ul>
+      <li>Explore the comprehensive <a href="../docs.html">Documentation</a></li>
+      <li>Check the <a href="../blog.html">Blog</a> for tutorials and deeper insights</li>
+      <li>Reach out via our <a href="../contact.html">Contact</a> page</li>
+      <li>Join discussions and report issues on our GitHub repo</li>
+    </ul>
+    <a href="../contact.html" class="btn-docs">
+      <i class="fas fa-envelope me-2"></i>Contact Support
+    </a>
+  </section>
+
+  <!-- Back Button -->
+  <section class="text-center mt-5">
+    <a href="../docs.html" class="btn-docs">
+      <i class="fas fa-arrow-left me-2"></i>Back to Documentation
+    </a>
+  </section>
+  
+  <!-- Footer Start -->
+<footer class="bg-dark text-white mt-5 pt-4 pb-3 border-top border-secondary">
+  <div class="container text-center">
+    <!-- Social Icons -->
+    <div class="mb-3 d-flex justify-content-center gap-4">
+      <!-- Email -->
+      <a href="mailto:neurolaunch@email.com" class="text-info" aria-label="Email">
+        <i class="fas fa-envelope fa-lg"></i>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/neurolaunch" class="text-info" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <!-- Twitter -->
+      <a href="https://twitter.com/neurolaunch" class="text-info" target="_blank" aria-label="Twitter">
+        <i class="fab fa-x-twitter fa-lg"></i>
+      </a>
+    </div>
+
+    <!-- Footer Text -->
+    <p class="mb-1">&copy; 2025 <strong>NeuroLaunch</strong>. All rights reserved.</p>
+    <p>
+      <a href="../legal/privacy-policy.html" class="text-info">Privacy Policy</a> |
+      <a href="../legal/terms-of-service.html" class="text-info">Terms of Service</a>
+    </p>
+  </div>
+</footer>
+<!-- Footer End -->
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YEC0GBX6FC"></script>
+<script src="analytics/tracking.js" defer></script>
+
+<!-- Bootstrap Bundle (JS + Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
+
